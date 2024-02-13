@@ -18,8 +18,8 @@ func DBInstance() *mongo.Client {
 	}
 
 	MongoDb := os.Getenv("MONGODB_URL")
-
-	clientOptions := options.Client().ApplyURI(MongoDb)
+	optionMongoDbUrl := MongoDb + "?retryWrites=true&w=majority"
+	clientOptions := options.Client().ApplyURI(optionMongoDbUrl)
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
