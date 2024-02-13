@@ -1,2 +1,4 @@
 .env
 go.mod
+monolithic-notes-app.exe
+go.sum
