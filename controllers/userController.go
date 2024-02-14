@@ -108,6 +108,7 @@ func Signup() gin.HandlerFunc{
 		if insertErr != nil {
 			msg := fmt.Sprintf("User item was not created")
 			c.JSON(http.StatusInternalServerError, gin.H{"error": msg})
+			defer cancel()
 			return
 		}
 		defer cancel()
