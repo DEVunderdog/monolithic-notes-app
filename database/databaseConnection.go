@@ -60,3 +60,8 @@ func OpenCollection(client *mongo.Client, collectionName string) *mongo.Collecti
 	CreateUniqueIndexes(collection)
 	return collection
 }
+
+func OpenNotesCollection(client *mongo.Client) *mongo.Collection {
+	var collection *mongo.Collection = client.Database("cluster0").Collection("notes")
+	return collection
+}

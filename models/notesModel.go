@@ -12,5 +12,5 @@ type Notes struct {
 	Description *string            `json:"description"`
 	Created_at  time.Time          `json:"created_at"`
 	Updated_at  time.Time          `json:"updated_at"`
-	UserID      string             `json:"user_id"`
+	Notes_id    string             `json:"notes_id"`
 }
